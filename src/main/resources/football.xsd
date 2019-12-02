@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://www.howtodoinjava.com/xml/school"
+           targetNamespace="https://www.howtodoinjava.com/xml/school" elementFormDefault="qualified">
+
+    <xs:element name="FootballerDetailsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="FootballerDetailsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Footballer" type="tns:Footballer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Footballer">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="club" type="xs:string"/>
+            <xs:element name="country" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
+
